@@ -12,6 +12,8 @@
 		FC7561F522D72DD400982302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7561F322D72DD400982302 /* Main.storyboard */; };
 		FC7561F722D72DD500982302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7561F622D72DD500982302 /* Assets.xcassets */; };
 		FC7561FA22D72DD500982302 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7561F822D72DD500982302 /* LaunchScreen.storyboard */; };
+		FC75620222D734CE00982302 /* BlurKernel.metal in Sources */ = {isa = PBXBuildFile; fileRef = FC75620122D734CE00982302 /* BlurKernel.metal */; };
+		FCA3D15622D8A66400EDD921 /* earth.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FCA3D15522D8A66400EDD921 /* earth.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FC7561F622D72DD500982302 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC7561F922D72DD500982302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC7561FB22D72DD500982302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC75620122D734CE00982302 /* BlurKernel.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BlurKernel.metal; sourceTree = "<group>"; };
+		FCA3D15522D8A66400EDD921 /* earth.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earth.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,14 @@
 		FC7561EE22D72DD400982302 /* GPUComputeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FCA3D15522D8A66400EDD921 /* earth.jpeg */,
 				FC7561EF22D72DD400982302 /* AppDelegate.swift */,
 				FC7561F122D72DD400982302 /* ViewController.swift */,
 				FC7561F322D72DD400982302 /* Main.storyboard */,
 				FC7561F622D72DD500982302 /* Assets.xcassets */,
 				FC7561F822D72DD500982302 /* LaunchScreen.storyboard */,
 				FC7561FB22D72DD500982302 /* Info.plist */,
+				FC75620122D734CE00982302 /* BlurKernel.metal */,
 			);
 			path = GPUComputeDemo;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			files = (
 				FC7561FA22D72DD500982302 /* LaunchScreen.storyboard in Resources */,
 				FC7561F722D72DD500982302 /* Assets.xcassets in Resources */,
+				FCA3D15622D8A66400EDD921 /* earth.jpeg in Resources */,
 				FC7561F522D72DD400982302 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC75620222D734CE00982302 /* BlurKernel.metal in Sources */,
 				FC7561F222D72DD400982302 /* ViewController.swift in Sources */,
 				FC7561F022D72DD400982302 /* AppDelegate.swift in Sources */,
 			);
@@ -283,7 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z5M2UUN5YV;
+				DEVELOPMENT_TEAM = A798K58VVL;
 				INFOPLIST_FILE = GPUComputeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,7 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z5M2UUN5YV;
+				DEVELOPMENT_TEAM = A798K58VVL;
 				INFOPLIST_FILE = GPUComputeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
