@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC747C1422DA280E007724CA /* GrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC747C1322DA280E007724CA /* GrayViewController.swift */; };
 		FC7561F022D72DD400982302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7561EF22D72DD400982302 /* AppDelegate.swift */; };
 		FC7561F222D72DD400982302 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7561F122D72DD400982302 /* ViewController.swift */; };
 		FC7561F522D72DD400982302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7561F322D72DD400982302 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC747C1322DA280E007724CA /* GrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayViewController.swift; sourceTree = "<group>"; };
 		FC7561EC22D72DD400982302 /* GPUComputeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPUComputeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7561EF22D72DD400982302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7561F122D72DD400982302 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		FC7561EE22D72DD400982302 /* GPUComputeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FC747C1322DA280E007724CA /* GrayViewController.swift */,
 				FCA3D15522D8A66400EDD921 /* earth.jpeg */,
 				FC7561EF22D72DD400982302 /* AppDelegate.swift */,
 				FC7561F122D72DD400982302 /* ViewController.swift */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC75620222D734CE00982302 /* BlurKernel.metal in Sources */,
+				FC747C1422DA280E007724CA /* GrayViewController.swift in Sources */,
 				FC7561F222D72DD400982302 /* ViewController.swift in Sources */,
 				FC7561F022D72DD400982302 /* AppDelegate.swift in Sources */,
 			);

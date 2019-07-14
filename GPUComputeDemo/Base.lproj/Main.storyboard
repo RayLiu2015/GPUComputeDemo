@@ -48,6 +48,44 @@
             </objects>
             <point key="canvasLocation" x="95.652173913043484" y="111.83035714285714"/>
         </scene>
+        <!--Gray View Controller-->
+        <scene sceneID="dhs-os-0VI">
+            <objects>
+                <viewController id="3gm-f3-gdj" customClass="GrayViewController" customModule="GPUComputeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gI9-73-Pnc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="9cZ-Oy-3PJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="732"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="hNd-SG-XhV">
+                                <rect key="frame" x="8" y="784" width="398" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="3gm-f3-gdj" eventType="valueChanged" id="rLF-wT-Qk4"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9cZ-Oy-3PJ" firstAttribute="trailing" secondItem="76Z-Zi-BEs" secondAttribute="trailing" id="EFG-hG-1qC"/>
+                            <constraint firstItem="hNd-SG-XhV" firstAttribute="top" secondItem="9cZ-Oy-3PJ" secondAttribute="bottom" constant="8" id="Ia7-gy-kif"/>
+                            <constraint firstItem="76Z-Zi-BEs" firstAttribute="trailing" secondItem="hNd-SG-XhV" secondAttribute="trailing" constant="10" id="JCY-0B-NT9"/>
+                            <constraint firstItem="hNd-SG-XhV" firstAttribute="leading" secondItem="76Z-Zi-BEs" secondAttribute="leading" constant="10" id="bZg-q9-r20"/>
+                            <constraint firstItem="9cZ-Oy-3PJ" firstAttribute="leading" secondItem="76Z-Zi-BEs" secondAttribute="leading" id="fAM-yq-LSc"/>
+                            <constraint firstItem="9cZ-Oy-3PJ" firstAttribute="top" secondItem="76Z-Zi-BEs" secondAttribute="top" id="gRW-xx-DdG"/>
+                            <constraint firstItem="76Z-Zi-BEs" firstAttribute="bottom" secondItem="9cZ-Oy-3PJ" secondAttribute="bottom" constant="86" id="yVq-ol-AMG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="76Z-Zi-BEs"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="9cZ-Oy-3PJ" id="vSR-UY-8MD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shP-bG-0yw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="143"/>
+        </scene>
     </scenes>
     <resources>
         <image name="earth.jpeg" width="658" height="987"/>

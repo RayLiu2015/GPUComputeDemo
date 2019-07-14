@@ -10,11 +10,11 @@ import UIKit
 import Metal
 import MetalKit
 
-public class MetalHelper: NSObject {
+public class GrayMetalHelper: NSObject {
     let device: MTLDevice
     let queue: MTLCommandQueue
     let textureLoader: MTKTextureLoader
-    static let shared: MetalHelper = MetalHelper.init()
+    static let shared: GrayMetalHelper = GrayMetalHelper.init()
     
     private override init(){
         device = MTLCreateSystemDefaultDevice()!
@@ -24,9 +24,9 @@ public class MetalHelper: NSObject {
     }
 }
 
-class ViewController: UIViewController {
+class GrayViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
-    let metalHelper: MetalHelper = MetalHelper.shared
+    let metalHelper: GrayMetalHelper = GrayMetalHelper.shared
     var outputTextureDesc: MTLTextureDescriptor!
     var inputTexture: MTLTexture!
     var pipline: MTLComputePipelineState?
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         outputTextureDesc = getOuputTextureDesc()
         
         let lib = metalHelper.device.makeDefaultLibrary()
-        if let function = lib?.makeFunction(name: "blur_kernel0") {
+        if let function = lib?.makeFunction(name: "blur_kernel") {
             pipline = try? metalHelper.device.makeComputePipelineState(function: function)
         }
         
@@ -63,10 +63,10 @@ class ViewController: UIViewController {
         if let slider = sender as? UISlider {
             var radius = Int(slider.value + 0.5)
             
-//            if radius == 0 {
-//                self.imageView.image = originImage
-//                return;
-//            }
+            //            if radius == 0 {
+            //                self.imageView.image = originImage
+            //                return;
+            //            }
             
             print(radius)
             
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
             encoder?.setTexture(outputTexture, index: 1)
             encoder?.setBytes(&radius, length: MemoryLayout<Int>.size, index: 0)
             encoder?.setBytes(&sumOfWeight, length: MemoryLayout<Float>.size, index: 1)
-
+            
             encoder?.setComputePipelineState(inPipline)
             
             let width = inPipline.threadExecutionWidth
